@@ -4,6 +4,10 @@
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: #F6F6F6;
     margin: 0;
@@ -36,8 +40,7 @@ header h1:hover {
     color: #404040;
 }
 
-header a {
-    text-decoration: none;
+header .blog {
     background-color: #C0C0C0;
     color: #FFF;
 
@@ -45,7 +48,7 @@ header a {
     transition: box-shadow .3s;
 }
 
-header a:hover {
+header .blog:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
