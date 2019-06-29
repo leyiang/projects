@@ -13,6 +13,9 @@
 <body>
     <div class="info">
         <p>Your score is: <strong><span class="score">10</span></strong></p>
+        <p style="margin-bottom: 0">Change the difficulty: </p>
+        <input onchange="changeDifficulty();" class="difficulty" type="range" value="10" min="1" max="30" style="margin-bottom: 1rem;">
+
         <button class="button" onclick="location.reload();">Reset</button>
         <button class="button" onclick="window.location.href = 'https://github.com/leyiang/p5js-Snake';">Check out Source Code</button>
         <p>Use space to pause the game.</p>
