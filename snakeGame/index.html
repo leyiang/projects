@@ -14,7 +14,7 @@
     <div class="info">
         <p>Your score is: <strong><span class="score">0</span></strong></p>
         <p style="margin-bottom: 0">Change the difficulty: </p>
-        <input onchange="changeDifficulty();" class="difficulty" type="range" value="10" min="1" max="120">
+        <input oninput="changing();" onmouseup="changeDifficulty();" class="difficulty" type="range" value="10" min="1" max="120">
         <p style="margin-top: 0rem;"> Level: <span class="level"></span> </p>
         <button class="button" onclick="location.reload();">Reset</button>
         <button class="button" onclick="window.location.href = 'https://github.com/leyiang/front-endProjects';">Check out Source Code</button>

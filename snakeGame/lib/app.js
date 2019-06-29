@@ -3,6 +3,7 @@ let food;
 let rez = 20;
 let pause = false;
 let difficulty = 10;
+let diffValue;
 
 function setup() {
     createCanvas(600, 600);
@@ -100,10 +101,13 @@ function pauseGame() {
     }
 }
 
-function changeDifficulty() {
-    var diffValue = document.getElementsByClassName("difficulty")[0].value;
-    setCookie("difficulty", diffValue, 1);
+function changing() {
+    diffValue = document.getElementsByClassName("difficulty")[0].value
+    document.getElementsByClassName("level")[0].innerHTML = diffValue;
 
+}
+function changeDifficulty() {
+    setCookie("difficulty", diffValue, 1);
     location.reload();
 }
 
