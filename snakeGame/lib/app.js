@@ -6,13 +6,13 @@ let difficulty = 10;
 
 function setup() {
     createCanvas(600, 600);
-    init();
-
 
     food = new Food();
     food.randomLocation();
 
     snake = new Snake(rez);
+    init();
+
     
     frameRate(difficulty);
 }
@@ -31,6 +31,7 @@ function draw() {
     // Check event
     if( snake.eat(food.obj) ) {
         snake.grow();
+        document.getElementsByClassName("score")[0].innerHTML = snake.body.length; 
         food.randomLocation();
     }
 
@@ -132,4 +133,6 @@ function init() {
     difficulty = isNaN(res) ? 10 : res;
     document.getElementsByClassName("difficulty")[0].value = difficulty;
     document.getElementsByClassName("level")[0].innerHTML = difficulty;
+
+    document.getElementsByClassName("score")[0].innerHTML = snake.body.length; 
 }
