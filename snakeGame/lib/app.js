@@ -4,6 +4,7 @@ let rez = 20;
 let pause = false;
 let difficulty = 10;
 let diffValue;
+let end = false;
 
 function setup() {
     createCanvas(600, 600);
@@ -42,6 +43,12 @@ function draw() {
 
     if( snake.hitsEdges(rez) ) {
         background(200, 0, 0, 100);
+
+        fill(230);
+        textAlign(CENTER, CENTER);
+        textSize(2);
+        text("Type Space to Start", width/2/rez, height/2/rez);
+        end = true;
         noLoop();
     }
 
@@ -49,7 +56,14 @@ function draw() {
     snake.update();
 
     if( snake.endGame(rez) ) {
-        background(200, 0, 0, 100);
+
+        background(200, 0, 0, 255);
+        
+        fill(230);
+        textAlign(CENTER, CENTER);
+        textSize(2);
+        text("Type Space to Start", width/2/rez, height/2/rez);
+        end = true;
         noLoop();
     }
 
@@ -86,8 +100,12 @@ function keyPressed() {
         break;
 
         case 32:
-            pauseGame();
-        break;
+            if(end) {
+                location.reload();
+            } else {
+                pauseGame();
+            }
+            break;
     }
 }
 
