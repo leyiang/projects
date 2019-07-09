@@ -1,2 +1,3 @@
-# This repository stores all my front-end projects.
-Have fun with it!
+# My Front-end Projects collection
+
+## Have fun!
